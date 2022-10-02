@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="CuentaAhorro" package="Modelo" visibility="public" xPosition="561.0" yPosition="30.0">
+      <Fields>
+        <Field name="idsaldo" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="idsaldo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="retirar" returnType="void" visibility="public">
+          <Argument type="double" name="valor"/>
+        </Method>
+        <Method name="consignar" returnType="void" visibility="public">
+          <Argument type="double" name="valor"/>
+        </Method>
+        <Method name="consultar" returnType="void" visibility="public"/>
+        <Method name="getIdsaldo" returnType="double" visibility="public"/>
+        <Method name="setIdsaldo" returnType="void" visibility="public">
+          <Argument type="double" name="idsaldo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CuentaBancaria" package="Modelo" visibility="public" xPosition="129.0" yPosition="268.0">
+      <Fields>
+        <Field name="idCuenta" type="String" visibility="public"/>
+        <Field name="idTitular" type="String" visibility="public"/>
+        <Field name="nombreTitular" type="String" visibility="public"/>
+        <Field name="tipoCuenta" type="String" visibility="public"/>
+        <Field name="idSede" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="idCuenta"/>
+          <Argument type="String" name="idTitular"/>
+          <Argument type="String" name="nombreTitular"/>
+          <Argument type="String" name="tipoCuenta"/>
+          <Argument type="String" name="idSede"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getIdCuenta" returnType="String" visibility="public"/>
+        <Method name="setIdCuenta" returnType="void" visibility="public">
+          <Argument type="String" name="idCuenta"/>
+        </Method>
+        <Method name="getIdTitular" returnType="String" visibility="public"/>
+        <Method name="setIdTitular" returnType="void" visibility="public">
+          <Argument type="String" name="idTitular"/>
+        </Method>
+        <Method name="getNombreTitular" returnType="String" visibility="public"/>
+        <Method name="setNombreTitular" returnType="void" visibility="public">
+          <Argument type="String" name="nombreTitular"/>
+        </Method>
+        <Method name="getTipoCuenta" returnType="String" visibility="public"/>
+        <Method name="setTipoCuenta" returnType="void" visibility="public">
+          <Argument type="String" name="tipoCuenta"/>
+        </Method>
+        <Method name="getIdSede" returnType="String" visibility="public"/>
+        <Method name="setIdSede" returnType="void" visibility="public">
+          <Argument type="String" name="idSede"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CuentaCorriente" package="Modelo" visibility="public" xPosition="1063.0" yPosition="49.0">
+      <Fields>
+        <Field name="tarjeta" type="String" visibility="private"/>
+        <Field name="tarjetaC" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="tarjeta"/>
+          <Argument type="String" name="tarjetaC"/>
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="char" name="sexo"/>
+          <Argument type="String" name="telefono"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="tarjeta"/>
+          <Argument type="String" name="tarjetaC"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTarjetaC" returnType="String" visibility="public"/>
+        <Method name="getTarjeta" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Operaciones" package="Modelo" visibility="public" xPosition="796.0" yPosition="354.0">
+      <Fields>
+        <Field name="cuenta" type="CuentaBancaria" visibility="package"/>
+        <Field name="listaCuenta" type="ArrayList&lt;CuentaBancaria&gt;" visibility="package"/>
+        <Field name="listaTitulares" type="ArrayList&lt;TitularCuenta&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Input" returnType="String" visibility="public">
+          <Argument type="String" name="text"/>
+        </Method>
+        <Method name="IngresardatosCuenta" returnType="void" visibility="public"/>
+        <Method name="ImprimirListaCuenta" returnType="void" visibility="public"/>
+        <Method name="IngresarDatosTitular" returnType="void" visibility="public"/>
+        <Method name="ImprimirListaTitular" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Principal" package="Modelo" visibility="public" xPosition="850.0" yPosition="106.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TitularCuenta" package="Modelo" visibility="public" xPosition="1147.0" yPosition="297.0">
+      <Fields>
+        <Field name="id" type="String" visibility="public"/>
+        <Field name="nombre" type="String" visibility="public"/>
+        <Field name="sexo" type="char" visibility="public"/>
+        <Field name="telefono" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="char" name="sexo"/>
+          <Argument type="String" name="telefono"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getSexo" returnType="char" visibility="public"/>
+        <Method name="setSexo" returnType="void" visibility="public">
+          <Argument type="char" name="sexo"/>
+        </Method>
+        <Method name="getTelefono" returnType="String" visibility="public"/>
+        <Method name="setTelefono" returnType="void" visibility="public">
+          <Argument type="String" name="telefono"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Modelo.CuentaCorriente" target="Modelo.TitularCuenta"/>
+    <HasRelation name="listaTitulares" source="Modelo.Operaciones" target="Modelo.TitularCuenta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;TitularCuenta&gt;"/>
+    <HasRelation name="cuenta" source="Modelo.Operaciones" target="Modelo.CuentaBancaria" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listaCuenta" source="Modelo.Operaciones" target="Modelo.CuentaBancaria" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;CuentaBancaria&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
